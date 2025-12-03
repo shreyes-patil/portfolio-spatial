@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
       "Integrated AI APIs for personalized content.",
       "Designed a modern, accessible UI/UX with dark mode and subscriptions."
     ],
-    link: "https://github.com/shreyes-patil/flashgen"
+    link: "https://apps.apple.com/us/app/flashgen-ai/id6755900236"
   },
   {
     title: "Vision3D",

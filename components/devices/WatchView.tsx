@@ -22,7 +22,7 @@ const WatchView: React.FC = () => {
               
               {/* Hex Grid / Bubbles Layout Simulation */}
               <div className="flex flex-wrap justify-center gap-2">
-                 {[...SKILLS.ios, ...SKILLS.architecture, ...SKILLS.backend].map((skill, i) => {
+                 {[...SKILLS.ios, ...SKILLS.mlFrameworks, ...SKILLS.architectureBackend, ...SKILLS.toolsLanguages].map((skill, i) => {
                      // Randomize colors slightly based on index for variety
                      const colors = [
                          'bg-orange-500/20 text-orange-200 border-orange-500/30',

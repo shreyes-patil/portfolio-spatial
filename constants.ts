@@ -49,6 +49,19 @@ export const PROFILE = {
 
 export const EXPERIENCE: Experience[] = [
   {
+    role: "Founding iOS Engineer",
+    company: "Constant Life (Computer Biology Labs)",
+    location: "Fort Lauderdale, FL",
+    date: "February 2026 – Present",
+    details: [
+      "Sole engineer and technical owner of a 0-to-1 iOS + watchOS AI voice companion, owning architecture end to end: real-time on-device audio capture, ECAPA-TDNN voiceprint authentication, ~25 on-device tool agents, and a LiveKit/WebRTC cloud-agent conversation layer",
+      "De-risked a high-blast-radius migration from an on-device STT/TTS pipeline to a server-side LiveKit/WebRTC agent by shipping it as three feature-flagged, inert phases, keeping the always-on recording pipeline alive throughout and flipping the flag only once the backend deployed",
+      "Closed a voiceprint false-accept caught in testing (a non-owner cleared the gate at 0.663 and uploaded private audio) by separating the owner-only gate from the labeling threshold and recalibrating the ECAPA-TDNN cutoff to 0.70, a measured 0.057 owner/impostor margin",
+      "Eliminated silent transcript loss in the SwiftData layer (a failed migration fell back to an in-memory store that discarded data on next launch) with a versioned schema migration plus a durable upload queue with exponential backoff",
+      "Shipped an on-device LLM intent classifier on a ~3 GB Gemma/llama.cpp model, then replaced it with Apple Foundation Models native tool-calling (type-safe @Generable structs, iOS 26+ with keyword fallback) after the larger model proved unreliable, cutting a multi-GB download"
+    ]
+  },
+  {
     role: "Software Engineering Intern",
     company: "Goomi Academy Education and Technology LLC",
     location: "Boston, MA",
@@ -142,10 +155,10 @@ export const EDUCATION: Education[] = [
 ];
 
 export const SKILLS = {
-  ios: ["Swift", "SwiftUI", "UIKit", "Core Data", "Realm", "Core ML", "ARKit", "RealityKit", "Vision", "Core Image"],
-  architecture: ["MVVM", "Clean Architecture", "RESTful APIs", "Auto Layout", "Combine"],
-  backend: ["Supabase", "Firebase", "AWS S3/CloudFront", "CloudKit", "Node.js", "PostgreSQL"],
-  tools: ["Xcode", "SwiftPM", "Git", "VS Code"]
+  ios: ["Swift", "SwiftUI", "UIKit", "Combine", "async/await", "AVFoundation", "Speech", "MusicKit", "HealthKit", "AppIntents", "WatchKit", "URLSession", "Codable", "XCTest"],
+  mlFrameworks: ["Core ML", "ONNX Runtime", "Vision", "Apple Foundation Models", "llama.cpp", "Realm", "SwiftData", "Core Data", "ARKit", "RealityKit", "Core Image", "LiveKit (WebRTC)"],
+  architectureBackend: ["MVVM", "Clean Architecture", "offline-first sync", "RESTful APIs", "Supabase", "Firebase", "AWS S3/CloudFront", "FastAPI", "Node.js", "PostgreSQL"],
+  toolsLanguages: ["Xcode", "Git", "GitHub Actions", "Claude Code", "Codex", "JavaScript", "TypeScript", "Python", "React"]
 };
 
 export const NAVIGATION_ITEMS = [
